@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head.ejs') %>
+    <title>Add New Blog</title>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %>
+    <div class="container-fluid">
+        <form action="/blog" method="POST" class="m-3" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" id="coverImage" name="coverImage">
+                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+              </div>
+            <label for="title" class="mb-3">Blog Title</label>
+            <input type="text" name="blogTitle" placeholder="Enter Blog Title" class="form-control">
+            <br>
+            <label for="floatingTextarea">Blog</label>
+            <textarea name="blog" class="form-control mt-3" placeholder="Leave a comment area"></textarea>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+    <%- include('partials/script.ejs') %>
+</body>
+</html>
